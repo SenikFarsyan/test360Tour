@@ -3,13 +3,18 @@
   "defaults": {
     "infos": {
       "icon": "icons/infoIcon.png"
+    },
+    "navs": {
+      "icon": "icons/white-circle.png",
+      "iconColorStart": "rgb(255, 255, 255)",
+      "iconColorEnd": "rgb(255, 255, 255)"
     }
   },
   "firstSceneId": "Gates",
   "scenes": [
     {
       "id": "Gates",
-      "photopanos": [{ "src": "./RAU__360__PHOTOS/1.jpg" }],
+      "photopanos": [{ "src": "./RAU__360__PHOTOS/1.jpg", "rotateY": 0 }],
       "navs": [
         {
           "to": "Gates_Entrance",
@@ -38,7 +43,7 @@
     },
     {
       "id": "Barrier",
-      "photopanos": [{ "src": "./RAU__360__PHOTOS/3.jpg", "rotateY": 0 }],
+      "photopanos": [{ "src": "./RAU__360__PHOTOS/3.jpg", "rotateY": 350 }],
       "navs": [
         { "to": "Gates_Entrance", "txt": "Gates entrance", "rotateY": 190 },
         { "to": "Sport_Complex", "txt": "Sport Complex", "rotateY": 440 },
@@ -46,6 +51,31 @@
           "to": "walk_1",
           "txt": "Walk",
           "rotateY": 360
+        }
+      ],
+      "infos": [
+        {
+          "card": [
+            { "type": "video", "src": "sport_complex.mp4", "ratio": 1.7 },
+            {
+              "type": "content",
+              "txt": "Спорткомплекс РАУ не имеет аналогов на всей территории Кавказа.",
+              "textColor": "white",
+              "fontSize": 0.18,
+              "pretransform": [
+                { "translate": [0.2, 0.2, -3] },
+                { "rotateY": 0 }
+              ]
+            }
+          ],
+
+          "width": 4.6,
+          "backgroundColor": "#00000011",
+          "icon": "icons/ideas-cinema.png",
+          "iconWidth": 0.75,
+          "iconHeight": 1.5,
+          "rotateY": 60,
+          "iconTranslateZ": -10
         }
       ]
     },
@@ -144,8 +174,7 @@
         {
           "to": "walk_4",
           "txt": "Walk",
-          "rotateY": 60,
-          "iconTranslateZ": -2.5
+          "rotateY": 50
         },
         {
           "to": "univer_entrance",
@@ -153,7 +182,49 @@
           "rotateY": 357,
           "rotateX": 5
         }
+      ],
+      "infos": [
+        {
+          "card": [
+            {
+              "type": "image",
+              "src": "armen_darbinyan.jpg",
+              "ratio": 1.9,
+              "borderWidth": 0
+            },
+            { "type": "header", "txt": "Армен Дарбинян" },
+            {
+              "type": "content",
+              "txt": "Мир вокруг нас постоянно меняется: сюрпризы погоды и скачки цен, одни гаджеты вытесняют другие, обновляются идеи, трансформируются отношения и возможности, но вечными остаются вопросы о мире и месте человека в нем. А еще о том, как складываются отношения во вневременной парадигме «Судьба — Человек», или «Создатель — Человек», или «Непреложные Обстоятельства — Человек». По концепции культуролога Арнольда Тойнби, цивилизации развиваются, отвечая на вызовы природы или территориальных соседей, а отсутствие адекватного ответа означает деградацию как человека, так и общества. О вызове как стимуле к росту и развитию, духовному преображению и нравственному становлению размышляет экс-премьер-министр Армении, профессор Армен Дарбинян",
+              "textColor": "#000000",
+              "fontSize": 0.12
+            },
+            { "type": "footer", "txt": "example@gmail.com" },
+            {
+              "type": "row",
+              "buttons": [
+                {
+                  "txt": "GitHub",
+                  "uri": "https://github.com/livetourlab/live-tour-lab"
+                },
+                { "txt": "E-mail", "uri": "mailto:anders@livetourlab.com" },
+                { "txt": "Msg", "uri": "https://m.me/livetourlab" },
+                { "txt": "Call", "uri": "tel:0123456789" }
+              ]
+            }
+          ],
+          "width": 3,
+          "backgroundColor": "#ffffffee",
+          "rotateY": 20,
+          "rotateX": -2,
+          "iconTranslateZ": -4,
+          "pretransform": [{ "translate": [0.2, 0.2, -3] }, { "rotateY": 0 }]
+        }
       ]
+    },
+    {
+      "id": "ameria_atm",
+      "photopanos": [{ "src": "./RAU__360__PHOTOS/25.jpg" }]
     },
     {
       "id": "univer_entrance",
@@ -190,10 +261,6 @@
           "rotateX": -6
         }
       ]
-    },
-    {
-      "id": "ameria_atm",
-      "photopanos": [{ "src": "./RAU__360__PHOTOS/25.jpg" }]
     },
     {
       "id": "foe",
@@ -730,12 +797,17 @@
         {
           "to": "Backyard",
           "txt": "Customize",
-          "rotateY": 111,
+          "rotateY": 20,
           "rotateX": 6,
-          "nextRotateY": 130,
+          "nextRotateY": 0,
           "icon": "icons/red-heart-big.png",
           "iconWidth": 1.5,
           "iconHeight": 1.5
+        },
+        {
+          "to": "garden_3",
+          "txt": "Go Back",
+          "rotateY": 50
         }
       ],
       "infos": [
